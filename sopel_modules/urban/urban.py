@@ -14,7 +14,7 @@ def display(bot, term, data):
 def get_definition(bot, term):
     data = None
     try:
-        data = requests.get('https://api.urbandictionary.com/v0/define?term={term}'.format(term=term)).json()[0]
+        data = requests.get('https://api.urbandictionary.com/v0/define?term={term}'.format(term=term)).json()
         return data
     except Exception:
         raise
@@ -24,10 +24,11 @@ def get_definition(bot, term):
 @example('.urban the rusty bower')
 def urban(bot, trigger):
     term = trigger.group(2)
+    print(term)
     # Get data from API
     data = get_definition(bot, term)
     # Have the bot print the data
     if data:
-        if data['list'] > 0:
+        if 'list' in data.keys() and len(data['list']) > 0:
             display(bot, term, data)
 
