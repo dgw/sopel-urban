@@ -24,7 +24,6 @@ def get_definition(bot, term):
 @example('.urban the rusty bower')
 def urban(bot, trigger):
     term = trigger.group(2)
-    print(term)
     # Get data from API
     data = get_definition(bot, term)
     # Have the bot print the data
