@@ -35,4 +35,3 @@ def urban(bot, trigger):
 if __name__ == "__main__":
     from sopel.test_tools import run_example_tests
     run_example_tests(__file__)
-
