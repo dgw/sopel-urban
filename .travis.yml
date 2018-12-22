@@ -1,6 +1,10 @@
 language: python
 python:
   - '3.5'
+addons:
+  apt:
+    packages:
+      - enchant
 install: 
   - pip install -e .
   - pip install -r tests/requirements.txt
