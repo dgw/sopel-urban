@@ -3,7 +3,7 @@
 # Licensed under the Eiffel Forum License 2
 import requests
 
-from sopel.module import commands, example, NOLIMIT
+from sopel.module import commands, example
 
 
 def display(bot, term, data):
