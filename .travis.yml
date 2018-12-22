@@ -1,0 +1,6 @@
+language: python
+python:
+  - '3.5'
+install: "pip install -e ."
+script:
+  - pycodestyle --show-source --ignore=E501,E402,E722  ./
