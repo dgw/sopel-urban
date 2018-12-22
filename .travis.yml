@@ -1,20 +1,20 @@
 language: python
 python:
-  - '3.5'
+- '3.5'
 addons:
   apt:
     packages:
-      - enchant
-install: 
-  - pip install -e .
-  - pip install -r tests/requirements.txt
+    - enchant
+install:
+- pip install -e .
+- pip install -r tests/requirements.txt
 script:
-  - flake8 --ignore=E501,F401 ./
+- flake8 --ignore=E501,F401 ./
 deploy:
   provider: pypi
   user: rustybower
   password:
-    secure: RPEqdLTtlvP/yV0YjiiiEK3MQmCMrrY/Ld/t3KbiZh6jEn0SLAL3RsWmkUWqQBNejw5rXpIrMH0uJjamFxLkSYi1KOELfb+YD5ndOHlOcYzWAqIjKiUFQ2pptg7t1EZVCNUIfu41/tQi2yMBArQEPRSJuTUtVI/F/OLrb7a2IStMexXuvTytPTc/CRKqCSN1NQzsWFvgTq07okdjeobX62R6Aoe4az+SG+uo4pbSa6fdhVVTABabeOpz9firBdx1XNKCrIPTsRzAMCtmVxr5ZbyStGmEpEwr6c/zYTvuEBnreiO3AOj7yCAwn1QwBWbZ1PcfXsWL7EfzUvT4RC1LGj9ogeoG/hbhHjzZ53ukcI6ylhgE/mPl6QuUNujlQwFKQI9pXiBiLA/o+xsC0NsWH4VvyZVDyP0T6w0RgFCwzyiIGLuPvKb+q22qYyHF1YyFU5hFdgxmeT7a9N1ia5ZAswbWaoUijYLwCn1Fbm131XS0wAY0jZBb/RbnHdQE+nrew2SFLhprdrzlhJcQ7sVIUxphRzbBD3//pNiImFyKLtEpcYrS0tws9tkE0qu8OwXhWgg1Vzm+n/Eq6JZrCNwW8fLaYZkTQmLJBbWxMZvTn3gHOltTltbpRYSGdYynHZ8dSRCYg+nCmWZMWFfgT571Aj1PVcB3cO7O2mOeqAa57eU=
+    secure: ybpoJ3a+HbF0BTG4Nq7bTYKjCQiXcWYSfbA87Oih5LR6zkY8ZHki6uUBQNx6UpjpvEDRKDbaZEi4CSGZ549poQw97H5Cc6jy8ZwuEy/l/DB+igIjEco8zrT8OKhznf2nA4jmZRcAOn9SRWmaBBPezQLu9A8JegD6QqaOE8cHR2ZJJ/js7rCt5N6EFenGoma7Lv8vBuy1I9u0P3TE3mN2FJxIDStQH0qEllPos0fMi5tGOtHFyl2qq1QrXIrfNESLL9WvTnJ3vNXI+PaWquacdExrSbYq/bKvRFS6IzeqD09KzDVVKtBTSRFIK/JT3kIubqxB2FHISyTx/LdK+qeTwSLAM22XfnDPSQ1pcljH/14nu2oXRwE5CHn+Rd9ZmCPhleZUqSuTtCr062U0okIySqAMrRLuLTCAcRheN4ZbrfIzekn4l2292Pqa1KkwkKkrJCHBRnERQf1Ks3zCJIyG1ii16W36suVtxU2d4rowY/h0oy+FgeXxgHK06IfYp3ZGSWYYyssUANnTATu/8X9LXf4vjCuTqSDvbuRftvsPb7KkBAKC3xs5j5ji2T7YcA7fCIPrEdsvkICcTepPBOoYhf+McskyEWrYkPGLFubnACyMywV5NSX/ts40orO1nj8c6XPVv29QCCYbgSUMo+1WoNo+SDLxrtD/E3AZbru89kU=
   on:
     tags: true
     python: '3.5'
