@@ -21,7 +21,7 @@ def get_definition(bot, term):
 
 
 @commands('ud', 'urban')
-@example('.urban fronking', 'fronking - Someone who farts [in the bath] [tub] and the bites [the bubbles]; can be more than one person biting each other\'s bubbles')
+@example('.urban fronking', 'fronking - If [your name] is [Hunter] you are a [fronker].')
 def urban(bot, trigger):
     term = trigger.group(2)
     # Get data from API
