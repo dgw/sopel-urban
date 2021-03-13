@@ -4,11 +4,21 @@
 import requests
 
 from sopel.module import commands, example
+from sopel.tools import get_sendable_message  # added in Sopel 6.6.2
 
 
 def display(bot, term, data):
     definition = data['list'][0]['definition']
-    bot.say('[urban] {term} - {definition}'.format(term=term, definition=definition))
+    # This guesswork nonsense can be replaced with `bot.say()`'s `trailing`
+    # parameter when dropping support for Sopel <7.1
+    msg, excess = get_sendable_message(
+        '[urban] {term} - {definition}'.format(term=term, definition=definition),
+        400,
+    )
+    if excess:
+        msg += ' […]'
+
+    bot.say(msg)
 
 
 def get_definition(bot, term):
