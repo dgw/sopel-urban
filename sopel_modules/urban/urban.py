@@ -8,7 +8,7 @@ from sopel.module import commands, example
 
 def display(bot, term, data):
     definition = data['list'][0]['definition']
-    bot.say('{term} - {definition}'.format(term=term, definition=definition))
+    bot.say('[urban] {term} - {definition}'.format(term=term, definition=definition))
 
 
 def get_definition(bot, term):
@@ -21,7 +21,7 @@ def get_definition(bot, term):
 
 
 @commands('ud', 'urban')
-@example('.urban fronking', 'fronking - Someone who farts [in the bath] [tub] and the bites [the bubbles]; can be more than one person biting each other\'s bubbles')
+@example('.urban fronking', '[urban] fronking - If [your name] is [Hunter] you are a [fronker].')
 def urban(bot, trigger):
     term = trigger.group(2)
     # Get data from API
