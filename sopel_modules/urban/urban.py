@@ -40,6 +40,9 @@ def urban(bot, trigger):
     if data:
         if 'list' in data.keys() and len(data['list']) > 0:
             display(bot, term, data)
+        else:
+            # No result; display error
+            bot.reply("Sorry, no results.")
 
 
 if __name__ == "__main__":
