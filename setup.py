@@ -27,7 +27,7 @@ with open('tests/requirements.txt') as dev_requirements_file:
 
 setup(
     name='sopel_modules.urban',
-    version='1.1.0',
+    version='1.2.0',
     description='Urban Dictionary module for Sopel',
     long_description=readme + '\n\n' + history,
     author='Rusty Bower',
