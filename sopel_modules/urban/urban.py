@@ -38,7 +38,10 @@ def get_definition(bot, term):
 @commands('ud', 'urban')
 @example('.urban fronking', '[urban] fronking - If [your name] is [Hunter] you are a [fronker].')
 def urban(bot, trigger):
-    term, _, num = trigger.group(2).partition('/')
+    if not trigger.group(2):
+        term = num = None
+    else:
+        term, _, num = trigger.group(2).partition('/')
 
     if num:
         try:
